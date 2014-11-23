@@ -1,0 +1,27 @@
+CODEBOOK
+
+INPUT PART*****
+features<- container for UCI HAR Dataset/features.txt
+activity<-container for UCI HAR Dataset/activity_labels.txt
+X_train<-container for UCI HAR Dataset/train/X_train.txt
+y_train<-container for UCI HAR Dataset/train/y_train.txt
+subject_train<-container for UCI HAR Dataset/train/subject_train.txt
+X_test<-container for UCI HAR Dataset/test/X_test.txt
+y_test<-container for UCI HAR Dataset/test/y_test.txt
+subject_test<-container for UCI HAR Dataset/test/subject_test.txt
+
+
+PROCESSING PART*****
+X_total<-combines X_train and X_test
+y_total<-combines y_train and y_test
+subject_total<-combines subject_train and subject_test
+choose<-identifies  mean ans std mesures in features file
+X_clean<-new data frame from selected columns
+choosenames<-select mean and std names from the features file
+y_activity<-joins y_total with activity
+X_clean$activity<-new column for activity
+X_clean$subject<-new column for subject
+
+OUTPUT PART*****
+tidy_output<- new data frame for calculations
+tidy_output.txt <- output file
